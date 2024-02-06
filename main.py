@@ -1,5 +1,6 @@
 from lib.student import Student
 from lib.classroom import Classroom
+from lib.report import Report
 
 if __name__ == "__main__":
     students = list()
@@ -9,8 +10,10 @@ if __name__ == "__main__":
         new_student = Student(f_name=first_name, l_name=last_name)
         students.append(new_student)
 
+    r = Report()
     for student in students:
         student.set_scores()
-        student.show()
+        r.show_scores(student)
 
+    c = Classroom(students=students)
     print(c.best_scores())

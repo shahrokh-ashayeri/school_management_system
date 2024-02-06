@@ -4,7 +4,7 @@ from rich.console import Console
 
 class Report:
     def show_scores(self, student):
-        table = Table(title=f"{self.first_name}, {self.last_name}")
+        table = Table(title=f"{student.first_name}, {student.last_name}")
         table.add_column("Course")
         table.add_column("Score")
 
