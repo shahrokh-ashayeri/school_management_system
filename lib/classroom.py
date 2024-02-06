@@ -1,6 +1,8 @@
 class Classroom:
-    def __init__(self, students) -> None:
+    def __init__(self, students, field_of_study, grade) -> None:
         self.students = students
+        self.field = field_of_study
+        self.grade = grade
 
     def best_scores(self):
         max_scores = dict()
