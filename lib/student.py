@@ -29,3 +29,7 @@ class Student:
 
         self.transcript = output
         return self.transcript
+
+    def __str__(self):
+        output = f"{self.first_name}, {self.last_name}"
+        return output
