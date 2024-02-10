@@ -1,6 +1,10 @@
 class Classroom:
     def __init__(self, students, field_of_study, grade) -> None:
-        self.students = students
+        self.students = [
+            student
+            for student in students
+            if student.grade == grade and student.field == field_of_study
+        ]
         self.field = field_of_study
         self.grade = grade
 

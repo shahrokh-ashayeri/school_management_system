@@ -1,5 +1,5 @@
 class Student:
-    def __init__(self, f_name, l_name) -> None:
+    def __init__(self, f_name, l_name, field, grade) -> None:
         self.courses = [
             "Math",
             "IS and web development",
@@ -9,6 +9,8 @@ class Student:
         ]
         self.first_name = f_name
         self.last_name = l_name
+        self.field = field
+        self.grade = grade
 
     def set_scores(self):
         print(f"{self.last_name}, {self.first_name}".center(50, "-"))
