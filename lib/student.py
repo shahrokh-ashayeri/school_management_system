@@ -1,3 +1,6 @@
+from .file_op import FileOperation
+
+
 class Student:
     def __init__(self, f_name, l_name, field, grade) -> None:
         self.courses = [
@@ -19,6 +22,7 @@ class Student:
             score = float(input(f"{course}: "))
             scores[course] = score
         self.scores = scores
+        FileOperation().write(scores)
 
     def get_transcript(self):
         output = dict()
@@ -30,6 +34,7 @@ class Student:
             output["scores"][course] = score
 
         self.transcript = output
+
         return self.transcript
 
     def __str__(self):
