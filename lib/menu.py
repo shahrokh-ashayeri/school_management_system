@@ -11,6 +11,8 @@ class Menu:
             studnet = Student.set_private_attr()
             f = FileOperation()
             f.write(studnet.get_private_attr())
+        elif cmd == "5":
+            Student.get_all()
         else:
             print("invalid command")
 
