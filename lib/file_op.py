@@ -12,8 +12,15 @@ class FileOperation:
         f.write(json_data)
 
     def read_all(self):
-        lst_ = [1, 2, 3, 4]
-        return lst_
+        elements = list()
+        with open(self.filename, mode="r") as element:
+            line = element.readline()
+            while line:
+                row = json.loads(line)
+                elements.append(row)
+                line = element.readline()
+
+        return elements
 
     def read_record(self, name, family):
         print(self.read_all())
