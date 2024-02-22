@@ -1,5 +1,6 @@
 from .file_op import FileOperation
 import time
+from .report import Report
 
 
 class Student:
@@ -60,6 +61,12 @@ class Student:
         data["field"] = self.field
         data["grade"] = self.grade
         return data
+
+    @staticmethod
+    def get_all():
+        f = FileOperation()
+        students_list = f.read_all()
+        Report.show_students(students_list)
 
     def __str__(self):
         output = f"{self.first_name}, {self.last_name}"
