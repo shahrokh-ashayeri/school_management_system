@@ -1,5 +1,5 @@
-from student import Student
-from file_op import FileOperation
+from .student import Student
+from .file_op import FileOperation
 
 
 class Menu:
@@ -7,8 +7,12 @@ class Menu:
         pass
 
     def command(self, cmd):
-        if cmd == 1:
+        if cmd == "1":
             studnet = Student.set_private_attr()
+            f = FileOperation()
+            f.write(studnet.get_private_attr())
+        else:
+            print("invalid command")
 
     def show(self):
         menu_items = """
