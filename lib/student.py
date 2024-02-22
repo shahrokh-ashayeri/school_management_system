@@ -1,8 +1,9 @@
 from .file_op import FileOperation
+import time
 
 
 class Student:
-    def __init__(self, f_name, l_name, field, grade) -> None:
+    def __init__(self, id, f_name, l_name, field, grade) -> None:
         self.courses = [
             "Math",
             "IS and web development",
@@ -10,6 +11,8 @@ class Student:
             "Human and environment ",
             "Arabic Language",
         ]
+
+        self.id = id
         self.first_name = f_name
         self.last_name = l_name
         self.field = field
@@ -36,6 +39,27 @@ class Student:
         self.transcript = output
 
         return self.transcript
+
+    @classmethod
+    def set_private_attr(self):
+        id = int(time.time())
+        first_name = input("Students firstname: ")
+        last_name = input("Students lastname: ")
+        field = input("Students education field: ")
+        grade = input("Studnets grade: ")
+
+        return Student(
+            id=id, f_name=first_name, l_name=last_name, field=field, grade=grade
+        )
+
+    def get_private_attr(self):
+        data = dict()
+        data["id"] = self.id
+        data["first_name"] = self.first_name
+        data["last_name"] = self.last_name
+        data["field"] = self.field
+        data["grade"] = self.grade
+        return data
 
     def __str__(self):
         output = f"{self.first_name}, {self.last_name}"
