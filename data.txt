@@ -1,1 +1,2 @@
-{"Math": 13.0, "IS and web development": 14.0, "Basic Technichal Knowledge": 15.0, "Human and environment ": 16.0, "Arabic Language": 17.0}{"Math": 17.0, "IS and web development": 16.0, "Basic Technichal Knowledge": 15.0, "Human and environment ": 14.0, "Arabic Language": 13.0}{"name": "shahrokh", "family": "ashayeri"}
+{"id": 1709194352, "first_name": "mohammad", "last_name": "rahmani", "field": "computer", "grade": "11"}
+{"id": 1709194442, "first_name": "abbass", "last_name": "mortezaqoli", "field": "computer", "grade": "11"}
