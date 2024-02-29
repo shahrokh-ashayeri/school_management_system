@@ -68,6 +68,19 @@ class Student:
         students_list = f.read_all()
         Report.show_students(students_list)
 
+    @staticmethod
+    def search(**kwargs):
+        search_list = kwargs.items()
+
+        students = FileOperation().read_all()
+        result = list()
+        for student in students:
+            for k, v in search_list:
+                if student[k] == v:
+                    result.append(student)
+
+        Report.show_students(result)
+
     def __str__(self):
         output = f"{self.first_name}, {self.last_name}"
         return output
