@@ -13,6 +13,8 @@ class Menu:
             f.write(studnet.get_private_attr())
         elif cmd == "5":
             Student.get_all()
+        elif cmd == "8":
+            Student.search(grade="11", last_name="mortezaqoli")
         else:
             print("invalid command")
 
@@ -25,6 +27,7 @@ class Menu:
         5- Show all students
         6- Show all teachers
         7- Report
+        8- Search (default:mohammad)
         """
 
         print(menu_items)
